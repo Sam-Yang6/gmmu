@@ -1,5 +1,5 @@
 // Package vm provides the models for address translations
-package pwcreq
+package gmmu
 
 import (
 	"github.com/sarchlab/akita/v3/mem/vm"
@@ -13,6 +13,7 @@ type TranslationReqpwc struct {
 	PID      vm.PID
 	DeviceID uint64
 	Lantency int
+	Req      *vm.TranslationReq
 }
 
 // Meta returns the meta data associated with the message.
@@ -28,6 +29,7 @@ type TranslationReqBuilder struct {
 	pid      vm.PID
 	deviceID uint64
 	lantency int
+	req      *vm.TranslationReq
 }
 
 // WithSendTime sets the send time of the request to build.:w
@@ -71,6 +73,12 @@ func (b TranslationReqBuilder) WithDeviceID(deviceID uint64) TranslationReqBuild
 // WithLantency sets the latency of the request to build.
 func (b TranslationReqBuilder) WithLantency(lantency int) TranslationReqBuilder {
 	b.lantency = lantency
+	return b
+}
+
+// WithReq sets the request of the request to build.
+func (b TranslationReqBuilder) WithReq(req *vm.TranslationReq) TranslationReqBuilder {
+	b.req = req
 	return b
 }
 

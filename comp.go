@@ -7,7 +7,7 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/Sam-Yang6/gmmu/pwcreq"
+	pwcreq "github.com/Sam-Yang6/gmmu/pwcreq"
 	"github.com/sarchlab/akita/v3/mem/vm"
 	"github.com/sarchlab/akita/v3/sim"
 	"github.com/sarchlab/akita/v3/tracing"

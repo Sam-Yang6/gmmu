@@ -1,5 +1,5 @@
 // Package vm provides the models for address translations
-package gmmu
+package pwcreq
 
 import (
 	"github.com/sarchlab/akita/v3/mem/vm"

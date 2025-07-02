@@ -1,4 +1,4 @@
-module github.com/Sam-Yang6/gmmu.git
+module github.com/Sam-Yang6/gmmu
 
 go 1.24.3
 

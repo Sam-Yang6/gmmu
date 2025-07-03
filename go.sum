@@ -1,3 +1,5 @@
+github.com/Sam-Yang6/pwcache v0.0.0-20250703080620-5a5cde596b74 h1:LprsEZp1Lb6v/ei7YylRPSx57umBQ8/lzpmcprNj27w=
+github.com/Sam-Yang6/pwcache v0.0.0-20250703080620-5a5cde596b74/go.mod h1:UXju1wwoKAML/6DobjOCY1CU7GNTISVaPvmt0JtKHx0=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-logr/logr v1.2.4 h1:g01GSCwiDw2xSZfjJ2/T9M+S6pFdcNtFYsp+Y43HYDQ=

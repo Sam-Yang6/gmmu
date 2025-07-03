@@ -71,7 +71,7 @@ func (gmmu *Comp) parseFromTop(now sim.VTimeInSec) bool {
 	case *vm.TranslationReq:
 		gmmu.startWalking(req)
 	case *pwcache.TranslationReqpwc:
-		pwcache.startWalkingafterpwc(req)
+		gmmu.startWalkingafterpwc(req)
 
 		// fmt.Printf("%0.9f,%s,GMMUParseFromTop,%s\n",
 		// 	float64(now), gmmu.topPort.Name(), req.TaskID)

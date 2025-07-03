@@ -7,7 +7,7 @@ import (
 	"log"
 	"reflect"
 
-	pwcreq "github.com/Sam-Yang6/gmmu/pwcreq"
+	"github.com/Sam-Yang6/pwcache"
 	"github.com/sarchlab/akita/v3/mem/vm"
 	"github.com/sarchlab/akita/v3/sim"
 	"github.com/sarchlab/akita/v3/tracing"
@@ -70,8 +70,8 @@ func (gmmu *Comp) parseFromTop(now sim.VTimeInSec) bool {
 	switch req := req.(type) {
 	case *vm.TranslationReq:
 		gmmu.startWalking(req)
-	case *pwcreq.TranslationReqpwc:
-		gmmu.startWalkingafterpwc(req)
+	case *pwcache.TranslationReqpwc:
+		pwcache.startWalkingafterpwc(req)
 
 		// fmt.Printf("%0.9f,%s,GMMUParseFromTop,%s\n",
 		// 	float64(now), gmmu.topPort.Name(), req.TaskID)
@@ -92,7 +92,7 @@ func (gmmu *Comp) startWalking(req *vm.TranslationReq) {
 	gmmu.walkingTranslations = append(gmmu.walkingTranslations, translationInPipeline)
 }
 
-func (gmmu *Comp) startWalkingafterpwc(req *pwcreq.TranslationReqpwc) {
+func (gmmu *Comp) startWalkingafterpwc(req *pwcache.TranslationReqpwc) {
 	translationInPipeline := transaction{
 		req:       req.Req,
 		cycleLeft: req.Lantency,

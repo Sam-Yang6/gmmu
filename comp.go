@@ -4,6 +4,7 @@
 package gmmu
 
 import (
+	"fmt"
 	"log"
 	"reflect"
 
@@ -109,7 +110,9 @@ func (gmmu *Comp) walkPageTable(now sim.VTimeInSec) bool {
 			continue
 		}
 		req := gmmu.walkingTranslations[i].req
-
+		if req == nil {
+			fmt.Print("invalid req")
+		}
 		page, _ := gmmu.pageTable.Find(req.PID, req.VAddr)
 
 		if page.DeviceID == gmmu.deviceID {
